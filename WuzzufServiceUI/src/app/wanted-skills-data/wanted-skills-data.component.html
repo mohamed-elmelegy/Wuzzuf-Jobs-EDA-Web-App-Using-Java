@@ -1,0 +1,24 @@
+<div class="container h-screen overflow-hidden mx-auto">
+  <div class="w-full p-12 my-12 rounded-xl shadow-xl bg-indigo-800 text-white">
+    <p class="text-4xl font-bold">{{'These are the most wanted skills for jobs' | titlecase}}</p>
+    <span class="text-xl">{{'each skills with the number of times it was requested' | titlecase}}</span>
+  </div>
+  <div class="w-full h-2/3 rounded-xl overflow-auto shadow-xl">
+    <div class="flex px-8 py-8 bg-white border-b">
+      <div class="w-1/2 text-center">
+        <span class="2xl:font-bold">Skill</span>
+      </div>
+      <div class="border-l-2 text-center w-1/2">
+        <span class="2xl:font-bold">Count</span>
+      </div>
+    </div>
+    <div *ngFor="let key of keys;let i = index" class="flex px-8 py-8 bg-white">
+      <div class="w-1/2 text-center">
+        <span>{{key}}</span>
+      </div>
+      <div class="border-l-2 text-center w-1/2">
+        <span>{{values[i]}}</span>
+      </div>
+    </div>
+  </div>
+</div>

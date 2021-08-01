@@ -1,0 +1,9 @@
+<div class="container h-screen overflow-hidden mx-auto">
+  <div class="w-full p-12 my-12 rounded-xl shadow-xl bg-indigo-800 text-white">
+    <p class="text-4xl font-bold">{{'this is top 10 companies requiring jobs chart' | titlecase}}</p>
+    <span class="text-xl">{{'each company with its percentage' | titlecase}}</span>
+  </div>
+  <div class="h-2/3 w-full rounded-xl overflow-hidden">
+    <img class="h-full w-16/9 rounded-xl mx-auto" [src]="jobPath?.plotPath" alt="">
+  </div>
+</div>

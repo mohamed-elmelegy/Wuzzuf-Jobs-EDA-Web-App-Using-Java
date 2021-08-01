@@ -1,0 +1,47 @@
+<div class="container h-screen overflow-hidden mx-auto">
+  <div class="w-full p-12 my-12 rounded-xl shadow-xl bg-indigo-800 text-white">
+    <p class="text-4xl font-bold">{{'this is all data' | titlecase}}</p>
+    <span class="text-xl">{{'you can see it down below' | titlecase}}</span>
+  </div>
+  <div class="w-full h-2/3 rounded-xl overflow-auto shadow-xl scrollbar">
+    <table class="w-full h-full" mat-table [dataSource]="allData$ | async">
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> title</th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="company">
+        <th mat-header-cell *matHeaderCellDef> company</th>
+        <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef> location</th>
+        <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef> type</th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> country</th>
+        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="level">
+        <th mat-header-cell *matHeaderCellDef> level</th>
+        <td mat-cell *matCellDef="let element"> {{element.level}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="skills">
+        <th mat-header-cell *matHeaderCellDef> skills</th>
+        <td mat-cell *matCellDef="let element"> {{element.skills}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

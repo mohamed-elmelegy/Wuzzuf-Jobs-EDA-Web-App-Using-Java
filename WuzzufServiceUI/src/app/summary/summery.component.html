@@ -1,0 +1,19 @@
+<div class="container h-screen overflow-hidden mx-auto">
+  <div class="w-full p-12 my-12 rounded-xl shadow-xl bg-indigo-800 text-white">
+    <p class="text-4xl font-bold">{{'This is a summary of the data' | titlecase}}</p>
+    <span class="text-xl">{{'the first 5 rows and the number of rows and columns of the data' | titlecase}}</span>
+  </div>
+
+  <div class="mx-auto p-8 2xl:font-bold my-8 rounded-xl shadow bg-white">{{summery?.header}}</div>
+  <div class="flex w-full flex-wrap">
+    <div class="rounded-xl shadow bg-white w-full p-4 my-4">{{summery?.line1}}</div>
+    <div class="rounded-xl shadow bg-white w-full p-4 my-4">{{summery?.line2}}</div>
+    <div class="rounded-xl shadow bg-white w-full p-4 my-4">{{summery?.line3}}</div>
+    <div class="rounded-xl shadow bg-white w-full p-4 my-4">{{summery?.line4}}</div>
+    <div class="rounded-xl shadow bg-white w-full p-4 my-4">{{summery?.line5}}</div>
+  </div>
+  <div class="flex">
+    <div class="p-8 w-1/2 mx-4 2xl:font-bold my-8 rounded-xl shadow bg-white">{{summery?.footer1}}</div>
+    <div class="p-8 w-1/2 mx-4 2xl:font-bold my-8 rounded-xl shadow bg-white">{{summery?.footer2}}</div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="sidebar" [ngClass]="{'open': isOpen}">
+  <div class="logo-details">
+    <i class='bx bx-crown'></i>
+    <div class="logo_name">Wuzzuf UI</div>
+    <i class='bx bx-menu' id="btn" [ngClass]="{'bx-menu-alt-right' : isOpen, 'bx-menu': !isOpen}" (click)="isOpen = !isOpen" ></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <a [routerLink]="['/all-data']">
+        <i class='bx bx-data' ></i>
+        <span class="links_name">All Data</span>
+      </a>
+      <span class="tooltip">All Data</span>
+    </li>
+    <li>
+      <a [routerLink]="['/summary']">
+        <i class='bx bx-book-open'></i>
+        <span class="links_name">Data Summary</span>
+      </a>
+      <span class="tooltip">Data Summary</span>
+    </li>
+    <li>
+      <a [routerLink]="['/jobs']">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Jobs Per Company</span>
+      </a>
+      <span class="tooltip">Jobs Per Company</span>
+    </li>
+    <li>
+      <a [routerLink]="['/jobPath']">
+        <i class='bx bx-pie-chart-alt-2' ></i>
+        <span class="links_name">JPC Chart</span>
+      </a>
+      <span class="tooltip">JPC Chart</span>
+    </li>
+    <li>
+      <a [routerLink]="['/popularJobs']">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Popular Jobs</span>
+      </a>
+      <span class="tooltip">Popular Jobs</span>
+    </li>
+    <li>
+      <a [routerLink]="['/popularJobsPath']">
+        <i class='bx bx-bar-chart-alt-2'></i>
+        <span class="links_name">PJ Chart</span>
+      </a>
+      <span class="tooltip">PJ Chart</span>
+    </li>
+    <li>
+      <a [routerLink]="['/popularAreasData']">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Popular Areas</span>
+      </a>
+      <span class="tooltip">Popular Areas</span>
+    </li>
+    <li>
+      <a [routerLink]="['/popularAreasPath']">
+        <i class='bx bx-bar-chart-alt-2'></i>
+        <span class="links_name">PA Chart</span>
+      </a>
+      <span class="tooltip">PA Chart</span>
+    </li>
+    <li>
+      <a [routerLink]="['/wantedSkillsData']">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Wanted Skills</span>
+      </a>
+      <span class="tooltip">Wanted Skills</span>
+    </li>
+    <li>
+      <a [routerLink]="['/KMeansPath']">
+        <i class='bx bx-network-chart' ></i>
+        <span class="links_name">KMeans Chart</span>
+      </a>
+      <span class="tooltip">KMeans Chart</span>
+    </li>
+  </ul>
+</div>
